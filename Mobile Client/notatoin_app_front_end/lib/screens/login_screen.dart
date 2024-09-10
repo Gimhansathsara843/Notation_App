@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:notatoin_app_front_end/screens/home_screen.dart';
+import 'package:notatoin_app_front_end/screens/forgot_password.dart';
+import 'package:notatoin_app_front_end/screens/register.dart';
 import 'package:notatoin_app_front_end/widgets/google_signin_button.dart';
 import 'package:notatoin_app_front_end/widgets/my_text_field.dart';
 import 'package:notatoin_app_front_end/widgets/sign_in_button.dart';
@@ -69,22 +70,34 @@ class LoginScreen extends StatelessWidget {
             //forgot password?
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
-              child: Text("Forgot Password ?",
-                  style: TextStyle(color: Colors.grey[700]),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      // Navigate to ForgotPassword page (ensure ForgotPassword is defined)
+                      Navigator.push(
+                        context,
+                       MaterialPageRoute(builder: (context) => ForgotPassword()),
+                      );
+                    },
+                    child: Text(
+                      "Forgot Password?",
+                      style: TextStyle(color: Colors.grey[700]),
+                    ),
                   ),
+                ],
+              ),
             ),
-
-                        const SizedBox(
+            const SizedBox(
               height: 15,
             ),
 
-
-            //sing in button
-
+            //sign in button
             SignInButton(
               onTap: signUserIn,
             ),
-                        const SizedBox(
+            const SizedBox(
               height: 25,
             ),
 
@@ -144,15 +157,27 @@ Row(
               ),),
 
             //not a number?register
-            Text("Register",
-            style: TextStyle(
-              color: Colors.blue,
-              fontWeight: FontWeight.bold,
+            // GestureDetector for Register navigation
+            GestureDetector(
+              onTap: () {
+                // Navigate to the RegisterPage
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Register()),
+                );
+              },
+              child: Text(
+                "Register",
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-              
-              ),
+            ),
 
-],)
+],
+
+)
             
 
           ],
