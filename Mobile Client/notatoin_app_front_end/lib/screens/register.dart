@@ -59,7 +59,7 @@ void signUserUp() {}
             MyTextField(
               controller: passwordController,
               hintText: "Password",
-              obscureText: true,
+              obscureText: false,
             ),
             const SizedBox(
               height: 10,
