@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:notatoin_app_front_end/screens/animation_screen.dart';
-//import 'package:notatoin_app_front_end/screens/login_screen.dart';
-
 
 void main() {
   runApp(MyApp());

@@ -9,7 +9,7 @@ class ForgotPassword extends StatelessWidget {
     final emailController=TextEditingController();
 
     void resetPassword(){
-      print("reset password");
+      print("send OTP");
     }
 
   @override
