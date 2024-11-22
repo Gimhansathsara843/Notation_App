@@ -22,7 +22,8 @@ class LoginScreen extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       backgroundColor: const Color.fromARGB(255, 233, 233, 233),
       body: Center(
-        child: SingleChildScrollView(  // Added SingleChildScrollView here
+        child: SingleChildScrollView(
+          // Added SingleChildScrollView here
           child: Column(
             children: [
               const SizedBox(
@@ -113,9 +114,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ),
                     Expanded(
-                      child: Divider(
-                        thickness: 0.5,
-                        color: Colors.grey[700]),
+                      child: Divider(thickness: 0.5, color: Colors.grey[700]),
                     ),
                   ],
                 ),
